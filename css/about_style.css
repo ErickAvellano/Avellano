@@ -1,13 +1,11 @@
 * {
-    padding: 10px;
-    margin: 10px;
     outline: none;
-
 }
   
 body {
     margin: 0px 0px;
     background-color: #222222;
+    overflow-x: hidden;
 }
 #cover-background {
     position: relative;
@@ -15,7 +13,7 @@ body {
 
 .tb {
     display: table;
-    width: 95%;
+    width: 96%;
 }
   
 .tr {
@@ -251,7 +249,7 @@ a {
 .about{
     background: #525151;
     border-radius: 5px;
-    height: 520px;
+    height: 100vh;
     width: 100%;
     margin-top: -7px;
 }
@@ -360,16 +358,11 @@ a {
     display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
 }
 #place_nav_about h3, img{
     display: inline;
-
-}
-#place_nav_about p{
-    padding-top: 5px;
-    color: #c4c4c4;
 
 }
   @import url('https://fonts.googleapis.com/css?family=Abel');
