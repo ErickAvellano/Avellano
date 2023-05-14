@@ -365,4 +365,6 @@ a {
     display: inline;
 
 }
-  @import url('https://fonts.googleapis.com/css?family=Abel');
+@media only screen and (max-width: 480px) {
+    @import url('https://fonts.googleapis.com/css?family=Abel');
+  }
