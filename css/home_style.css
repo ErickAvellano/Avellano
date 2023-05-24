@@ -1,79 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    
-}
-.container{
-    background: linear-gradient(to bottom, #000000, #bfbfbf, #ffffff);
-}
-section{
-    font-family: 'Staatliches', cursive;
-    overflow-y: hidden;
-}
-.split-view {
+body {
+    background: #536475;
+    font-family: serif;
+  }
+  body p {
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    font-size: 15px;
+  }
+  .box-container {
+    width: 80%;
+    height: 500px;
     display: flex;
-    flex-direction: row-reverse;
-}
-  
-.left-section {
-    flex-basis: 50%;
-    height: 100vh;
-    gap: 4em;
-    padding: 0 3em;
-    width: minmax(80px, 80%);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-  
-.right-section {
-    flex-basis: 50%;
-    height: 100vh;
+    align-items: stretch;
+    box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.03);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
     position: relative;
-    z-index: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.right-section img{
-    width: 835px;
-    z-index: 1;
   }
-.header {
-    margin-top: -10px;
-    margin-left: 75px;
-    width: max-content;
-    font-size: 2.875rem;
-    white-space: nowrap;
-    color: transparent;
-    -webkit-text-stroke: 1px #222222;
-}
-.header::after {
-    content: '';
+  .box1-content img {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5%;
-}
-
-
-
-
-.content {
-    font-size: 1.5em;
-    color: #404040;
-    margin-left: 75px;
-    margin-top: -5px;
-}
-.content h2{
-    font-size: 1.5em;
-    color: #404040;
-    margin-left: 0px;
-    margin-top: 200px;
-}
-
-@media only screen and (max-width: 480px) {
-    @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+    top: 110px;
+    left:300px;
+    width: 100.5vh;
+    object-fit: cover;
+    z-index: 0;
   }
+  .box-container.right-open .box1-content {
+    flex: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  .box-container.right-open .box1-side {
+    flex: 0;
+  }
+  .box-container.right-open .box2-side {
+    flex: 2;
+  }
+  .box-container.right-open .box2-content {
+    flex: 4;
+    padding: 30px 40px;
+    opacity: 1;
+  }
+  .box1-content, .box1-side, .box2-content, .box2-side {
+    transition: all 0.3s ease-out;
+    color: darkslategray;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .box1-side, .box2-side {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .box1-content {
+    background: whitesmoke;
+    flex: 4;
+    padding: 30px 40px;
+  }
+  .box1-side {
+    background: #bac6d2;
+    flex: 2;
+  }
+  .box2-side {
+    background: #a6bdbd;
+    flex: 0;
+  }
+  .box2-content {
+    background: whitesmoke;
+    flex: 0;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+  button {
+    background: #11526b;
+    padding: 10px 50px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.32);
+    color: white;
+    margin: 30px 0;
+  }
+h1{
+    z-index: 1;
+    font-size: 50px;
+}
+p{
+    z-index: 1;
+    font-size: 40px;
+}
+.img-bx img {
+    width: 40vh;
+
+}
+   .sci {
+	position: relative;
+	display: flex;
+	margin-top: 5px;
+  }
+  
+  .sci li {
+	list-style: none;
+	margin: 4px;
+  }
+  
+  .sci li a {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background: transparent;
+	font-size: 1.5em;
+	color: #444;
+	text-decoration: none;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	transition: 0.5s;
+  }
+  
+  .sci li a:hover {
+	background: #03a9f4;
+	color: #fff;
+  }
+  .hover-text {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 5px;
+	background-color: #333;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 12px;
+  }
+  .sci li a:hover .hover-text {
+	display: block;
+  }               

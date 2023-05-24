@@ -5,27 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home_style.css">
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js"crossorigin="anonymous"></script>
 
     <title>Document</title>
 </head>
 <body>
     <nav class="navbar"></nav> <!--Kailangan to para mag work yung navbar.html-->
     <section> <!--dito tayo mag lalagay ng div or kung ano paman ikakaag ta-->
-        <div class="container">
-            <div class="split-view">
-                <div class="left-section">
-                    <div class="content"><h2>HELLO, Welcome to my Website! <br>I'M</></h2></div>
-                    <div class="header"><h1>Erick D. Avellano</h1></div>
-                    <div class="content">I'm a BS Information Technology student at Bicol University. I'm excited <br> to be pursuing my passion for technology and working towards becoming <br> a Network Engineer in the future. Thanks for visiting my site!"!</div>
-                </div>
-                <div class="right-section">
-                    <img src="img/photo_home.png" alt="">
-                  <!-- content for right section goes here -->
-                </div>
+        <div class="box-container">
+            <div class="box1-content content">
+              <h1>Hello and welcome to my website!</h1>
+              <p><br>My name is Erick Avellano and I'm a BS Information Technology student<br> at Bicol University. I'm excited to be pursuing my passion for technology<br> and working towards becoming a Network Engineer in the future.<br> Thanks for visiting my site!"</p>
+              <img src="/img/photo_home.png" alt="">
             </div>
+            <div class="box1-side">
+              <button class="right-button">Social ⟶</button>
+            </div>
+            <div class="box2-side">
+              <button class="left-button">⟵ Intro</button>
+            </div>
+            <div class="box2-content content">
+                <div class="card">
+                    <div class="img-bx">
+                      <img src="img/photo_contact.png" alt="img" />
+                    </div>
+                    <div class="content">
+                      <div class="detail">
+                        <h2>Erick D. Avellano<br/><span></span></h2>
+                        <span>Add and Follow me</span><br>
+                        <span>Social / Contacts:</span>
+                        <ul class="sci">
+                            <li>
+                              <a href="https://www.facebook.com/erick.avellano.7"><i class="fab fa-facebook-f"></i><span class="hover-text">erick.avellano.7</span></a>
+                            </li>
+                            <li>
+                              <a href="https://www.instagram.com/kushikimigt"><i class="fab fa-instagram"></i><span class="hover-text">kushikimigt</span></a>
+                            </li>
+                            <li>
+                              <a href="https://github.com/ErickAvellano"><i class="fab fa-github-alt"></i><span class="hover-text">ErickAvellano</span></a>
+                            </li>
+                            <li>
+                              <a href="mailto:erickdevega.avellano@bicol-u.edu.ph = Feedback&body = Message"><i class="fab fa-google"></i><span class="hover-text">erickdevega.avellano@bicol-u.edu.ph</span></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fab fa-discord"></i><span class="hover-text">CybAI #5443</span></a>
+                            </li>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
         </div>
     </section>
     <script src="js/nav_script.js"></script> <!--Kailangan to para mag work yung navbar.htm-->
     <script src="js/footer_script.js"></script> <!--Kailangan to para mag work yung navbar.htm-->
+    <script>
+        const container = document.querySelector('.box-container');
+        const contents = document.querySelectorAll('.content');
+        const buttons = document.querySelectorAll('button');
+
+        buttons.forEach( button => button.addEventListener('click', function() {
+        container.classList.toggle('right-open');
+        }));
+    </script>
 </body>
 </html>
