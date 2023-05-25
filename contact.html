@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/contact_style.css">
-    <script src="https://kit.fontawesome.com/66aa7c98b3.js"crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 
     <title>Document</title>
 </head>
@@ -13,27 +13,21 @@
     <nav class="navbar"></nav> <!--Kailangan to para mag work yung navbar.htm-->
     <section>
       <div>
-      <form action="connect.php" class="form">
+        <form class="forms" action="connect.php" method="post">
         <h2>CONTACT ME</h2>
         <p><label for="name">Name:</label><input id="name" name="name" type="text" placeholder="Write your name here.."></p>
         <p><label for="email">Email:</label><input id="email" name="email" type="email" placeholder="Let us know how to contact you back.."></p>
         <p><label for="message">Message:</label><textarea id="message" name="message" placeholder="What would you like to tell us.."></textarea></p>
         <button type="submit">Send Message</button>
-        <div class="forms">
+        <div class="formss">
           <span class="fa fa-phone"></span>09154067307
           <span class="fa fa-envelope-o"></span> avellanoerick@gmail.com
         </div>
-      </div>
-      </form> 
+      </form>
+      </div> 
     </section>
     <footer class="foot"></footer> <!--Kailangan to para mag work yung navbar.htm-->
     <script src="js/nav_script.js"></script> <!--Kailangan to para mag work yung navbar.htm-->
     <script src="js/footer_script.js"></script> <!--Kailangan to para mag work yung navbar.htm-->
-    <script>
-      function addClass() {
-  document.body.classList.add("sent");
-}
-  sendLetter.addEventListener("click", addClass);
-    </script>
 </body>
 </html>

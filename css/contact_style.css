@@ -6,7 +6,7 @@ body{
   background-color: #333333;
 }
 
-.form {
+.forms {
   width: 340px;
   height: 440px;
   background: #e6e6e6;
@@ -74,7 +74,7 @@ button:hover {
   color: #fff;
 }
 
-.forms {
+.formss {
   content: 'Hi';
   position: absolute;
   bottom: -15px;
