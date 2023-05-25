@@ -6,19 +6,19 @@ var_dump($_POST);
 if (isset($_POST['name'])) {
     $name = $_POST['name'];
 } else {
-    $name = "";
+    $name = '';
 }
 
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
 } else {
-    $email = "";
+    $email = '';
 }
 
 if (isset($_POST['message'])) {
     $message = $_POST['message'];
 } else {
-    $message = "";
+    $message = '';
 }
 
 $sql = "INSERT INTO contact (Name, Email, Message) VALUES ('$name', '$email', '$message')";
