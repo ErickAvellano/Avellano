@@ -8,26 +8,29 @@
     <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar"></nav> <!--Kailangan to para mag work yung navbar.htm-->
-    <section>
+  <nav class="navbar"></nav>
+  <section>
       <div>
-        <form class="forms" action="connect.php" method="post">
-        <h2>CONTACT ME</h2>
-        <p><label for="name">Name:</label><input id="name" name="names" type="text" placeholder="Write your name here.."></p>
-        <p><label for="email">Email:</label><input id="email" name="emails" type="email" placeholder="Let us know how to contact you back.."></p>
-        <p><label for="message">Message:</label><textarea id="message" name="messages" placeholder="What would you like to tell us.."></textarea></p>
-        <button type="submit">Send Message</button>
-        <div class="formss">
-          <span class="fa fa-phone"></span>09154067307
-          <span class="fa fa-envelope-o"></span> avellanoerick@gmail.com
-        </div>
+        <form action="saveFormData.php" method="post" class="forms">
+          <h2>CONTACT ME</h2>
+          <label for="name">Name:</label>
+          <input name="name" type="text" placeholder="Write your name here.." required>
+
+          <label for="email">Email:</label>
+          <input name="email" type="email" placeholder="Let us know how to contact you back.." required>
+
+          <label for="message">Message:</label>
+          <textarea name="message" placeholder="What would you like to tell us.." required></textarea>
+          <button type="submit">Send Message</button>
+
+          <div class="formss">
+              <span class="fa fa-phone"></span>09154067307
+              <span class="fa fa-envelope-o"></span> avellanoerick@gmail.com
+          </div>
       </form>
-      </div> 
-    </section>
-    <footer class="foot"></footer> <!--Kailangan to para mag work yung navbar.htm-->
-    <script src="js/nav_script.js"></script> <!--Kailangan to para mag work yung navbar.htm-->
-    <script src="js/footer_script.js"></script> <!--Kailangan to para mag work yung navbar.htm-->
-    <script>
-    </script>
+  </section>
+  <footer class="foot"></footer>
+  <script src="js/nav_script.js"></script>
+  <script src="js/footer_script.js"></script>
 </body>
 </html>
