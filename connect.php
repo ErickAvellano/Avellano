@@ -1,17 +1,19 @@
 <?php
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-  
-    $con = new mysqli('localhost', 'root', '', 'websystem_db');
-    if ($con->connect_error) {
-      die('Connection Failed: '.$con->connect_error);
-    } else {
-      $stmt = $con->prepare("INSERT INTO contact (name, email, message) VALUES (?, ?, ?)");
-      $stmt->bind_param("sss", $name, $email, $message);
-      $stmt->execute();
-      echo "Message Sent";
-      $stmt->close();
-      $con->close();
-    }
+if (!empty($_POST)) {
+  $name = isset($_POST['name']) ? $_POST['name'] : '';
+  $email = isset($_POST['email']) ? $_POST['email'] : '';
+  $message = isset($_POST['message']) ? $_POST['message'] : '';
+
+$conn = new mysqli('localhost','root','','websystem_db');
+if($conn->connect_error){
+  die('Connection Failed: ' . $conn->connect_error);
+}else{
+  $stmt = $conn->prepare("insert into contact (Name, Email, Message) VALUES (?, ?, ?)");
+  $stmt->bind_param("sss", $name, $email, $message);
+  $stmt->execute();
+  echo "Registration Successful";
+  $stmt->close();
+  $conn->close();
+}
+}
 ?>
